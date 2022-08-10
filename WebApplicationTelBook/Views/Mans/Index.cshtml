@@ -1,0 +1,32 @@
+﻿@using WebApplicationTelBook.Model.Entities
+@model List<Man>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+<div>
+    <table border="1">
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Phone</td>
+            <td>Description</td>
+        </tr>
+        @foreach (Man man in Model)
+        {
+            <tr>
+                <td>@man.Id</td>
+                <td>@man.Name</td>
+                <td>@man.Phone</td>
+                <td>@man.Description</td>
+            </tr>
+        }
+    </table>
+</div>
+</body>
+</html>
